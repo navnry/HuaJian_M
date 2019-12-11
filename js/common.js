@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     let openMenuBtn = $("#triggerMenuBtn"),
@@ -61,7 +60,6 @@ $(document).ready(function () {
     });
 
 
-
     if ($(".banner .swiper-slide").length > 1) {
         new Swiper(".banner .swiper-container", {
             speed: 600,
@@ -82,5 +80,39 @@ $(document).ready(function () {
                 el: ".diy .swiper-pagination"
             }
         })
+    }
+
+
+    $(".recommend-home .list-tabs li").on("click", function () {
+        var _index = $(this).index()
+        $(this).addClass("active").siblings().removeClass("active")
+        $(".recommend-home .list-box .list-item").eq(_index).fadeIn().siblings().hide()
+    })
+    $(".news .list-tabs li").on("click", function () {
+        var _index = $(this).index()
+        $(this).addClass("active").siblings().removeClass("active")
+        $(".news .list-box .list-item").eq(_index).fadeIn().siblings().hide()
+    })
+    if ($(".problem-home").length > 0) {
+        $(".problem-home .list").slide({
+            mainCell: "ul",
+            effect: "topMarquee",
+            vis: 4,
+            interTime: 50,
+            autoPlay: true,
+            easing: "swing"
+        });
+    }
+
+    if ($(".jmlc").length > 0) {
+        new Swiper('.jmlc .swiper-container', {
+            // direction: 'vertical',
+            resistanceRatio:0,
+            slidesPerView: 'auto',
+            freeMode: true,
+            scrollbar: {
+                el: '.jmlc .swiper-scrollbar',
+            },
+        });
     }
 })
