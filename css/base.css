@@ -1,7 +1,8 @@
 @charset "UTF-8";
-*{
+* {
     box-sizing: border-box;
 }
+
 body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0
@@ -37,13 +38,16 @@ input[type="submit"], input[type="reset"], input[type="button"], input {
     resize: none;
     border: none;
 }
+
 body, html {
     scroll-behavior: smooth;
 }
-body{
-    font:14px/1.3 tahoma,arial,sans-serif;
+
+body {
+    font: 14px/1.3 tahoma, arial, sans-serif;
     background-color: #fff;
 }
+
 /* 取消链接高亮  */
 body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -68,11 +72,17 @@ em, i {
 
 textarea {
     resize: none; /*禁用了文本的拖拉，尤其在谷歌下*/
+    font: inherit;
+}
+
+textarea::placeholder {
+    font-family: inherit;
 }
 
 p {
     word-wrap: break-word; /* 不够的单词自动换行 而不会被截掉 */
 }
+
 .main:after,
 ul:after,
 .clearfix:after {
